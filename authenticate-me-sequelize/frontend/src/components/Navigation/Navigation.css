@@ -1,0 +1,9 @@
+#nav-bar{
+    background-color: rgb(204, 60, 3);
+    margin: 0;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+}
