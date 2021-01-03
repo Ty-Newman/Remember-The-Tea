@@ -12,14 +12,20 @@ const CreateListForm = () => {
     return(
         <div id='list-form-wrapper'>
             <form>
-                <label for='listName'>List Name: </label>
-                <input
-                    type='text'
-                    id='list-name'
-                    name='listName'
-                    onChange={(e) => setListName(e.target.value)}
-                 />
-                <button type="submit">add list</button>
+                <ul class="flex-outer">
+                    <li>
+                        <label for='listName'>List Name: </label>
+                        <input
+                            type='text'
+                            id='list-name'
+                            name='listName'
+                            onChange={(e) => setListName(e.target.value)}
+                            />
+                    </li>
+                    <li>
+                        <button type="submit">add list</button>
+                    </li>
+                </ul>
             </form>
         </div>
     );
