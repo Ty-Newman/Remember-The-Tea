@@ -6,6 +6,7 @@ import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import ListsPage from "./components/Lists";
+import CreateListForm from "./components/CreateListForm";
 
 function App() {
   const dispatch = useDispatch();
@@ -27,6 +28,9 @@ function App() {
           </Route>
           <Route path="/lists">
             <ListsPage />
+          </Route>
+          <Route path='/create-list'>
+            <CreateListForm />
           </Route>
         </Switch>
       )}
