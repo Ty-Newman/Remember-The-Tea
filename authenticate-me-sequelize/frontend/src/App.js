@@ -7,6 +7,7 @@ import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import ListsPage from "./components/Lists";
 import CreateListForm from "./components/CreateListForm";
+import CreateTaskForm from "./components/CreateTaskForm";
 
 function App() {
   const dispatch = useDispatch();
@@ -31,6 +32,9 @@ function App() {
           </Route>
           <Route path='/create-list'>
             <CreateListForm />
+          </Route>
+          <Route path='/create-task'>
+            <CreateTaskForm />
           </Route>
         </Switch>
       )}
