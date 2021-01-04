@@ -4,6 +4,7 @@ const usersRouter = require("./users.js");
 const listsRouter = require("./lists.js");
 const createListRouter = require('./createList.js');
 const createTaskRouter = require('./createTask.js');
+const taskRouter = require('./tasks.js');
 
 // // GET /api/set-token-cookie
 // const asyncHandler = require('express-async-handler');
@@ -46,6 +47,8 @@ router.post("/test", function (req, res) {
 router.use("/session", sessionRouter);
 
 router.use("/users", usersRouter);
+
+router.use("/lists/:id", taskRouter)
 
 router.use("/lists", listsRouter);
 

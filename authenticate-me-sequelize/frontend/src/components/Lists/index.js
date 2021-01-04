@@ -1,5 +1,4 @@
-import {fetch} from '../../store/csrf';
-import {useEffect, useState} from 'react';
+import {useEffect} from 'react';
 
 import {useDispatch, useSelector} from 'react-redux';
 import {fetchAllLists} from '../../store/lists';
@@ -31,7 +30,7 @@ const ListsPage = () => {
             <ul>
                 {currentLists && currentLists.map(list => {
                     if (currentUser.id === list.userId){
-                        return <li>{list.listName}</li>
+                        return <li><a href={'/lists/' + list.id}>{list.listName}</a></li>
                     }
                 })}
             </ul>

@@ -9,6 +9,7 @@ import ListsPage from "./components/Lists";
 import CreateListForm from "./components/CreateListForm";
 import CreateTaskForm from "./components/CreateTaskForm";
 import Home from "./components/Home";
+import TasksPage from "./components/Tasks";
 
 function App() {
   const dispatch = useDispatch();
@@ -28,8 +29,11 @@ function App() {
           <Route path="/signup">
             <SignupFormPage />
           </Route>
-          <Route path="/lists">
+          <Route exact path="/lists">
             <ListsPage />
+          </Route>
+          <Route path='/lists/:id'>
+            <TasksPage />
           </Route>
           <Route path='/create-list'>
             <CreateListForm />
