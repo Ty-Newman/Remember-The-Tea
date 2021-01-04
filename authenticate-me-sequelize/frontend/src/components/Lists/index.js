@@ -1,16 +1,27 @@
 import {fetch} from '../../store/csrf';
 import {useEffect, useState} from 'react';
 
+import {useDispatch, useSelector} from 'react-redux';
+import {fetchAllLists} from '../../store/lists';
+
 const ListsPage = () => {
 
-    const [currentLists, setLists] = useState([])
+    const dispatch = useDispatch();
+
+    const currentLists = useSelector(fullReduxState => {
+        return fullReduxState.lists;
+    })
+
+    const currentUser = useSelector(state => {
+        return state.session.user;
+    });
+    console.log(currentLists);
+    console.log(currentUser);
 
     useEffect(async () => {
-        const response = await fetch('/api/lists');
-        // const user = await fetch('/api/users');
-        console.log(response);
-        // console.log(user);
-        setLists(response.data.lists);
+        // const response = await fetch('/api/lists');
+        // setLists(response.data.lists);
+        dispatch(fetchAllLists());
     }, []);
 
     return (
@@ -19,7 +30,9 @@ const ListsPage = () => {
             {!currentLists && <h3>Loading....</h3>}
             <ul>
                 {currentLists && currentLists.map(list => {
-                    return <li>{list.listName}</li>
+                    if (currentUser.id === list.userId){
+                        return <li>{list.listName}</li>
+                    }
                 })}
             </ul>
             <a href="/create-list">Create a List</a>
