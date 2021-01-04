@@ -20,5 +20,9 @@
 
   #modal-content {
     position: absolute;
-    background-color:white;
+    width: 50%;
+    background-color: rgb(241, 216, 177);
+  }
+  #modal-content h1{
+    padding-left: 50%;
   }

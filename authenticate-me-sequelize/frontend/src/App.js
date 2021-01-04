@@ -8,6 +8,7 @@ import Navigation from "./components/Navigation";
 import ListsPage from "./components/Lists";
 import CreateListForm from "./components/CreateListForm";
 import CreateTaskForm from "./components/CreateTaskForm";
+import Home from "./components/Home";
 
 function App() {
   const dispatch = useDispatch();
@@ -35,6 +36,9 @@ function App() {
           </Route>
           <Route path='/create-task'>
             <CreateTaskForm />
+          </Route>
+          <Route path="/">
+            <Home />
           </Route>
         </Switch>
       )}

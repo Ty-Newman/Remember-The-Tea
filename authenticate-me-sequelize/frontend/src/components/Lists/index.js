@@ -22,7 +22,7 @@ const ListsPage = () => {
                     return <li>{list.listName}</li>
                 })}
             </ul>
-            <a href="#">Create a List</a>
+            <a href="/create-list">Create a List</a>
         </div>
     );
 };
