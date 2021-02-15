@@ -8,13 +8,13 @@
   },
   "devDependencies": {},
   "scripts": {
-    "heroku-postbuild": "npm run build --prefix frontend",
-    "install": "npm --prefix backend install backend && npm --      prefix frontend install frontend",
+    "heroku-postbuild": "npm run build --prefix authenticate-me-sequelize/frontend",
+    "install": "npm --prefix authenticate-me-sequelize/backend install authenticate-me-sequelize/backend && npm --      prefix authenticate-me-sequelize/frontend install frontend",
     "dev:backend": "npm install --prefix authenticate-me-sequelize/backend start",
     "dev:frontend": "npm install --prefix authenticate-me-sequelize/frontend start",
-    "sequelize": "npm run --prefix backend sequelize",
-    "sequelize-cli": "npm run --prefix backend sequelize-cli",
-    "start": "npm start --prefix backend"
+    "sequelize": "npm run --prefix authenticate-me-sequelize/backend sequelize",
+    "sequelize-cli": "npm run --prefix authenticate-me-sequelize/backend sequelize-cli",
+    "start": "npm start --prefix authenticate-me-sequelize/backend"
   },
   "repository": {
     "type": "git",
